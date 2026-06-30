@@ -27,9 +27,18 @@ Agent Skill Atlas gives that local system a visual management layer:
 
 ## Quick Start
 
-From this repository:
+Install directly from GitHub:
 
 ```bash
+npm install -g github:draculavan/agent-skill-atlas
+agent-skill-atlas demo
+```
+
+Or run from a local clone:
+
+```bash
+git clone https://github.com/draculavan/agent-skill-atlas.git
+cd agent-skill-atlas
 npm install -g .
 agent-skill-atlas scan --root examples/demo-skills --out examples/demo-atlas.json
 agent-skill-atlas demo
@@ -133,7 +142,9 @@ npm.cmd test
 npm.cmd run build
 ```
 
-## Release Status
+## Status
 
-This first version is designed to be developed privately, validated locally,
-and only then published publicly after an explicit release decision.
+Agent Skill Atlas is public and usable as an early open-source release. The
+scanner and UI are intentionally conservative: metadata first, local first, and
+privacy first. Feedback about other agent skill folder layouts is welcome in
+Issues or Discussions.
