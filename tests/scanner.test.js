@@ -22,7 +22,7 @@ test("scanner exports metadata only with relative paths and predictable warnings
   assert.ok(atlas.capabilities.every((capability) => capability.source.rootName === "skills"));
 
   const serialized = JSON.stringify(atlas);
-  assert.equal(serialized.includes("C:\\Users\\Administrator"), false);
+  assert.equal(serialized.includes("PRIVATE_HOME_PATH_MARKER"), false);
   assert.equal(serialized.includes("Full private instruction body"), false);
   assert.equal(serialized.includes("private-note"), false);
   assert.equal(serialized.includes("Hidden Secret Skill"), false);

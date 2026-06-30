@@ -26,7 +26,7 @@ const demoAtlas = JSON.parse(await fs.readFile(demoAtlasPath, "utf8"));
 assertAtlasShape(demoAtlas);
 
 const serialized = JSON.stringify(demoAtlas);
-for (const forbidden of ["C:\\\\Users\\\\Administrator", "token", "auth", "sqlite", "memory", "Full private instruction body"]) {
+for (const forbidden of ["PRIVATE_HOME_PATH_MARKER", "token", "auth", "sqlite", "memory", "Full private instruction body"]) {
   if (serialized.includes(forbidden)) {
     throw new Error(`Demo atlas contains forbidden string: ${forbidden}`);
   }

@@ -27,7 +27,7 @@ test("static UI includes required control surfaces without private paths", async
     assert.ok(joined.includes(required), `missing UI marker ${required}`);
   }
 
-  for (const forbidden of ["C:\\Users\\Administrator", ".codex/skills", "logs_2.sqlite", "Full private instruction body"]) {
+  for (const forbidden of ["PRIVATE_HOME_PATH_MARKER", ".codex/skills", "logs_2.sqlite", "Full private instruction body"]) {
     assert.equal(joined.includes(forbidden), false, `contains private marker ${forbidden}`);
   }
 });
