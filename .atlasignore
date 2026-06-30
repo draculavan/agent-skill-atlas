@@ -1,0 +1,28 @@
+# Agent Skill Atlas default project-level ignore file.
+# These patterns protect common private runtime state from scans.
+
+.git
+node_modules
+dist
+coverage
+
+auth
+credentials
+secrets
+tokens
+sessions
+logs
+memory
+memories
+cache
+
+.env
+.env.*
+*.env
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+*.p12
+*.pfx

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedAt": "2026-06-30T19:11:01.777Z",
+  "counts": {
+    "capabilities": 3,
+    "categories": 14,
+    "packs": 1,
+    "warnings": 0,
+    "scannedRoots": 1
+  },
+  "categories": [
+    {
+      "id": "routing-orchestration",
+      "label": "Routing & Orchestration",
+      "description": "Skill selection, agent routing, delegation, and workflow control.",
+      "keywords": [
+        "route",
+        "routing",
+        "dispatch",
+        "orchestration",
+        "agent",
+        "handoff",
+        "workflow",
+        "loop"
+      ],
+      "count": 1
+    },
+    {
+      "id": "software-engineering",
+      "label": "Software Engineering",
+      "description": "Coding, debugging, refactoring, testing, CI, and release engineering.",
+      "keywords": [
+        "code",
+        "coding",
+        "debug",
+        "test",
+        "tests",
+        "ci",
+        "github",
+        "pull request",
+        "repo",
+        "typescript",
+        "python"
+      ],
+      "count": 0
+    },
+    {
+      "id": "product-design",
+      "label": "Product Design",
+      "description": "Product UX, UI, design systems, flows, prototypes, and critiques.",
+      "keywords": [
+        "design",
+        "figma",
+        "prototype",
+        "ui",
+        "ux",
+        "wireframe",
+        "screen",
+        "visual",
+        "frontend"
+      ],
+      "count": 0
+    },
+    {
+      "id": "research-knowledge",
+      "label": "Research & Knowledge",
+      "description": "Research, knowledge capture, documentation search, and synthesis.",
+      "keywords": [
+        "research",
+        "knowledge",
+        "notion",
+        "search",
+        "summarize",
+        "synthesis",
+        "brief",
+        "context"
+      ],
+      "count": 0
+    },
+    {
+      "id": "docs-writing",
+      "label": "Docs & Writing",
+      "description": "Documents, plans, specs, editing, writing, and publishing drafts.",
+      "keywords": [
+        "doc",
+        "docs",
+        "document",
+        "writing",
+        "spec",
+        "readme",
+        "copy",
+        "draft",
+        "editor"
+      ],
+      "count": 0
+    },
+    {
+      "id": "data-analysis",
+      "label": "Data & Analysis",
+      "description": "Spreadsheets, structured data, charts, extraction, and analysis.",
+      "keywords": [
+        "data",
+        "spreadsheet",
+        "sheet",
+        "csv",
+        "chart",
+        "analysis",
+        "dataset",
+        "table"
+      ],
+      "count": 0
+    },
+    {
+      "id": "automation-ops",
+      "label": "Automation & Ops",
+      "description": "Local automation, scripts, scheduled checks, system operations, and maintenance.",
+      "keywords": [
+        "automation",
+        "scheduled",
+        "monitor",
+        "ops",
+        "maintenance",
+        "health",
+        "backup",
+        "script"
+      ],
+      "count": 0
+    },
+    {
+      "id": "integrations",
+      "label": "Integrations",
+      "description": "Connectors, APIs, plugins, MCP servers, and external app workflows.",
+      "keywords": [
+        "api",
+        "plugin",
+        "connector",
+        "mcp",
+        "gmail",
+        "calendar",
+        "drive",
+        "integration",
+        "webhook"
+      ],
+      "count": 0
+    },
+    {
+      "id": "media-generation",
+      "label": "Media Generation",
+      "description": "Image, video, audio, presentation, PDF, and creative production workflows.",
+      "keywords": [
+        "image",
+        "video",
+        "audio",
+        "slides",
+        "pdf",
+        "render",
+        "creative",
+        "media",
+        "hyperframes"
+      ],
+      "count": 0
+    },
+    {
+      "id": "project-management",
+      "label": "Project Management",
+      "description": "Planning, handoffs, milestones, checklists, and execution coordination.",
+      "keywords": [
+        "plan",
+        "planning",
+        "project",
+        "milestone",
+        "status",
+        "handoff",
+        "checklist",
+        "roadmap"
+      ],
+      "count": 0
+    },
+    {
+      "id": "quality-review",
+      "label": "Quality & Review",
+      "description": "Audits, reviews, verification, risk checks, and regression prevention.",
+      "keywords": [
+        "review",
+        "audit",
+        "verify",
+        "verification",
+        "quality",
+        "risk",
+        "regression",
+        "lint"
+      ],
+      "count": 1
+    },
+    {
+      "id": "business-strategy",
+      "label": "Business Strategy",
+      "description": "Positioning, launch, monetization, GTM, and commercial packaging.",
+      "keywords": [
+        "business",
+        "launch",
+        "market",
+        "monetization",
+        "gtm",
+        "positioning",
+        "offer",
+        "sales"
+      ],
+      "count": 1
+    },
+    {
+      "id": "personal-workflow",
+      "label": "Personal Workflow",
+      "description": "User-specific productivity, inbox, calendar, personal knowledge, and habits.",
+      "keywords": [
+        "personal",
+        "inbox",
+        "calendar",
+        "daily",
+        "habit",
+        "productivity",
+        "assistant",
+        "routine"
+      ],
+      "count": 0
+    },
+    {
+      "id": "uncategorized",
+      "label": "Uncategorized",
+      "description": "Skills that need manual category review.",
+      "keywords": [],
+      "count": 0
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "demo-skills-zh-routing",
+      "name": "Chinese Routing Advisor",
+      "description": "帮中文用户把复杂任务分流到合适的 agent skill、插件或本地工作流。",
+      "kind": "skill",
+      "source": {
+        "type": "local",
+        "rootName": "demo-skills"
+      },
+      "category": "routing-orchestration",
+      "relativePath": "zh-routing/SKILL.md",
+      "tags": [
+        "routing",
+        "chinese"
+      ],
+      "routeStatus": "ready",
+      "warnings": []
+    },
+    {
+      "id": "demo-skills-code-review",
+      "name": "Code Review",
+      "description": "Review source changes for risk, regressions, missing validation, and maintainability.",
+      "kind": "skill",
+      "source": {
+        "type": "local",
+        "rootName": "demo-skills"
+      },
+      "category": "quality-review",
+      "relativePath": "code-review/SKILL.md",
+      "tags": [
+        "review",
+        "quality",
+        "engineering"
+      ],
+      "routeStatus": "ready",
+      "warnings": []
+    },
+    {
+      "id": "demo-skills-launch-planner",
+      "name": "Launch Planner",
+      "description": "Package a developer tool launch with positioning, README structure, launch copy, and community channels.",
+      "kind": "skill",
+      "source": {
+        "type": "local",
+        "rootName": "demo-skills"
+      },
+      "category": "business-strategy",
+      "relativePath": "launch-planner/SKILL.md",
+      "tags": [
+        "launch",
+        "gtm",
+        "business"
+      ],
+      "routeStatus": "ready",
+      "warnings": []
+    }
+  ],
+  "packs": [
+    {
+      "id": "local-demo-skills",
+      "name": "demo-skills",
+      "kind": "skill-root",
+      "source": {
+        "type": "local",
+        "rootName": "demo-skills"
+      },
+      "capabilityCount": 3,
+      "summaryOnly": false,
+      "warnings": []
+    }
+  ],
+  "diagnostics": {
+    "metadataOnly": true,
+    "absolutePathsExported": false,
+    "roots": [
+      {
+        "rootName": "demo-skills",
+        "type": "local",
+        "status": "scanned",
+        "skillFiles": 3
+      }
+    ],
+    "warnings": [],
+    "skipped": []
+  }
+}

@@ -1,0 +1,2 @@
+Nested assets are allowed in skill folders but should not be exported.
+

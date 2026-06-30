@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Skill Atlas</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Local-first skill intelligence</p>
+          <h1>Agent Skill Atlas</h1>
+          <p class="tagline">A private visual atlas for your AI agent skills.</p>
+        </div>
+        <div class="privacy-stack" aria-label="Privacy guarantees">
+          <span>Metadata only</span>
+          <span>Relative paths</span>
+          <span>No upload</span>
+        </div>
+      </header>
+
+      <section class="stats" aria-label="Atlas statistics">
+        <div>
+          <span id="stat-capabilities">0</span>
+          <small>Capabilities</small>
+        </div>
+        <div>
+          <span id="stat-categories">0</span>
+          <small>Categories</small>
+        </div>
+        <div>
+          <span id="stat-packs">0</span>
+          <small>Packs</small>
+        </div>
+        <div>
+          <span id="stat-warnings">0</span>
+          <small>Warnings</small>
+        </div>
+      </section>
+
+      <main class="workspace">
+        <aside class="panel controls" aria-label="Atlas controls">
+          <label class="field">
+            <span>Search</span>
+            <input id="search" type="search" placeholder="Search skills, tags, routes" autocomplete="off" />
+          </label>
+
+          <section>
+            <div class="section-title">Categories</div>
+            <div id="category-list" class="category-list"></div>
+          </section>
+
+          <section>
+            <label class="field">
+              <span>Read-only route preview</span>
+              <input id="route-query" type="search" placeholder="Describe a task" autocomplete="off" />
+            </label>
+            <div id="route-results" class="route-results"></div>
+          </section>
+
+          <section>
+            <div class="section-title">Packs</div>
+            <div id="pack-list" class="pack-list"></div>
+          </section>
+        </aside>
+
+        <section class="atlas-stage" aria-label="Skill atlas">
+          <div class="canvas-wrap">
+            <canvas id="atlas-canvas" width="1200" height="720" aria-label="Capability network"></canvas>
+          </div>
+          <div class="toolbar">
+            <span id="result-count">0 capabilities</span>
+            <button id="clear-filters" type="button">Clear</button>
+          </div>
+          <div id="capability-list" class="capability-list"></div>
+        </section>
+
+        <aside id="detail-panel" class="panel detail" aria-label="Capability details">
+          <div class="empty-state">Select a capability to inspect metadata.</div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

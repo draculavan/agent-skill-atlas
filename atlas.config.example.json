@@ -1,0 +1,26 @@
+{
+  "roots": [
+    "~/.codex/skills",
+    "~/.agents/skills"
+  ],
+  "taxonomy": [
+    {
+      "id": "custom-ops",
+      "label": "Custom Ops",
+      "description": "Team-specific operating workflows.",
+      "keywords": ["handoff", "runbook", "ops", "workflow"]
+    }
+  ],
+  "overrides": {
+    "launch-planner": {
+      "category": "business",
+      "tags": ["launch", "go-to-market"]
+    }
+  },
+  "hidden": [
+    "private/**",
+    "**/scratch/**"
+  ],
+  "includePlugins": false,
+  "pluginSummaryMode": "summary"
+}
