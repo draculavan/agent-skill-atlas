@@ -1,87 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Agent Skill Atlas</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./app.js"></script>
   </head>
   <body>
-    <div class="shell">
+    <canvas id="shader" aria-hidden="true"></canvas>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="grain"></div>
+
+    <main class="page">
+      <nav class="nav">
+        <div class="brand"><span class="brand-mark"></span><b>Agent Skill Atlas v2</b></div>
+        <nav><a href="#atlas">星图</a><a href="#motion">设计规则</a></nav>
+      </nav>
+
       <header class="hero">
-        <div>
-          <p class="eyebrow">Local-first skill intelligence</p>
-          <h1>Agent Skill Atlas</h1>
-          <p class="tagline">A private visual atlas for your AI agent skills.</p>
-        </div>
-        <div class="privacy-stack" aria-label="Privacy guarantees">
-          <span>Metadata only</span>
-          <span>Relative paths</span>
-          <span>No upload</span>
-        </div>
-      </header>
-
-      <section class="stats" aria-label="Atlas statistics">
-        <div>
-          <span id="stat-capabilities">0</span>
-          <small>Capabilities</small>
-        </div>
-        <div>
-          <span id="stat-categories">0</span>
-          <small>Categories</small>
-        </div>
-        <div>
-          <span id="stat-packs">0</span>
-          <small>Packs</small>
-        </div>
-        <div>
-          <span id="stat-warnings">0</span>
-          <small>Warnings</small>
-        </div>
-      </section>
-
-      <main class="workspace">
-        <aside class="panel controls" aria-label="Atlas controls">
-          <label class="field">
-            <span>Search</span>
-            <input id="search" type="search" placeholder="Search skills, tags, routes" autocomplete="off" />
-          </label>
-
-          <section>
-            <div class="section-title">Categories</div>
-            <div id="category-list" class="category-list"></div>
-          </section>
-
-          <section>
-            <label class="field">
-              <span>Read-only route preview</span>
-              <input id="route-query" type="search" placeholder="Describe a task" autocomplete="off" />
-            </label>
-            <div id="route-results" class="route-results"></div>
-          </section>
-
-          <section>
-            <div class="section-title">Packs</div>
-            <div id="pack-list" class="pack-list"></div>
-          </section>
-        </aside>
-
-        <section class="atlas-stage" aria-label="Skill atlas">
-          <div class="canvas-wrap">
-            <canvas id="atlas-canvas" width="1200" height="720" aria-label="Capability network"></canvas>
+        <section>
+          <div class="eyebrow">skill / plugin operating map</div>
+          <h1>Agent<span>Skill Atlas</span></h1>
+          <p class="lead">
+            这是你的本地 Agent Skill / Plugin 能力操作系统首页：用深空神经网络表达能力连接，
+            用产品级控制台承载搜索、分类、边界和只读路由预览。
+          </p>
+          <div class="chips">
+            <span class="chip gold">Local-first</span>
+            <span class="chip">Canvas / WebGL</span>
+            <span class="chip">分类控制台</span>
+            <span class="chip">只读路由预览</span>
+            <span class="chip">大包不平铺</span>
           </div>
-          <div class="toolbar">
-            <span id="result-count">0 capabilities</span>
-            <button id="clear-filters" type="button">Clear</button>
-          </div>
-          <div id="capability-list" class="capability-list"></div>
         </section>
 
-        <aside id="detail-panel" class="panel detail" aria-label="Capability details">
-          <div class="empty-state">Select a capability to inspect metadata.</div>
+        <aside class="hero-card">
+          <h2>能力中枢</h2>
+          <p>
+            主星系代表工作流分类；圆形节点代表独立 skill；六边形节点代表大包或插件包。
+            包内小项只做摘要，避免隐私、信息密度和 token 成本失控。
+          </p>
+          <div class="metrics">
+            <div class="metric"><b id="countSkills">-</b><span>metadata 能力</span></div>
+            <div class="metric"><b id="countPacks">-</b><span>大包/插件包</span></div>
+            <div class="metric"><b id="countChildren">-</b><span>分类/警告</span></div>
+          </div>
         </aside>
-      </main>
-    </div>
+      </header>
+
+      <section class="app-shell" id="atlas">
+        <aside class="panel control">
+          <h2>探索控制</h2>
+          <p>先从主分类进入分类控制台，再查看独立技能、大包、推荐组合和误用边界。</p>
+          <div class="mode-row">
+            <span class="mode-chip gold" id="modeLabel">总览模式</span>
+            <span class="mode-chip">圆点 = 独立技能</span>
+            <span class="mode-chip">六边形 = 大包</span>
+          </div>
+
+          <label for="q">全局 / 分类搜索</label>
+          <input id="q" placeholder="例如：review、launch、research、video、agent" autocomplete="off" />
+
+          <label for="cat">主分类</label>
+          <select id="cat"><option value="">全部星系</option></select>
+
+          <button class="reset-btn" id="resetFocus" type="button">返回总览星图</button>
+
+          <div class="route-preview">
+            <h4>只读路由预览</h4>
+            <input id="routeQ" placeholder="输入一句需求，只显示候选，不执行调用" autocomplete="off" />
+            <div class="route-results" id="routeResults"></div>
+          </div>
+
+          <div class="console" id="categoryPanel"></div>
+        </aside>
+
+        <section class="panel stage">
+          <canvas id="network" aria-label="Agent Skill Atlas network"></canvas>
+          <div class="stage-hint">点击星系进入控制台 · 点击节点查看详情</div>
+          <div class="stage-caption">interactive neural capability atlas</div>
+        </section>
+
+        <aside class="panel detail" id="detail"></aside>
+      </section>
+
+      <section class="motion" id="motion">
+        <h2>产品化规则</h2>
+        <p>
+          这个开源版保留你的星图界面语言，但数据来源改为用户自己的本地 `atlas.json`。
+          视觉层负责高级感，控制层负责清晰，路由预览只做候选展示，不执行 skill、插件、账号或外部写入。
+        </p>
+        <div class="motion-grid" id="motionCards"></div>
+      </section>
+    </main>
   </body>
 </html>

@@ -16,11 +16,12 @@ test("static UI includes required control surfaces without private paths", async
 
   for (const required of [
     "Agent Skill Atlas",
-    "search",
-    "category-list",
+    "shader",
+    "network",
+    "categoryPanel",
     "route-results",
-    "detail-panel",
-    "atlas-canvas",
+    "detail",
+    "motionCards",
     "prefers-reduced-motion"
   ]) {
     assert.ok(joined.includes(required), `missing UI marker ${required}`);
