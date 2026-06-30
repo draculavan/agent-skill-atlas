@@ -11,6 +11,10 @@
 - [x] Topics: `agent-skills`, `codex-skills`, `developer-tools`, `local-first`, `visualization`
 - [x] Issues enabled
 - [x] Discussions enabled
+- [x] Contributing guide
+- [x] Security policy
+- [x] Roadmap
+- [x] Marketing playbook
 
 ## Soft Launch
 
@@ -21,6 +25,7 @@
 - [x] Create starter issue: https://github.com/draculavan/agent-skill-atlas/issues/3
 - [x] Create starter issue: https://github.com/draculavan/agent-skill-atlas/issues/4
 - [ ] Collect first 3-5 user reports before bigger launch
+- [ ] Add a short demo GIF or video to README
 - [ ] Consider awesome-list PRs after first feedback
 
 ## Candidate Communities

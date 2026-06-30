@@ -1,5 +1,10 @@
 # Agent Skill Atlas
 
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+![Node.js >=20](https://img.shields.io/badge/node-%3E%3D20-3c873a.svg)
+![Local first](https://img.shields.io/badge/privacy-local--first-5eead4.svg)
+![Metadata only](https://img.shields.io/badge/export-metadata--only-f5c451.svg)
+
 **A local-first visual atlas for your AI agent skills.**
 
 Agent Skill Atlas scans local skill metadata from Codex, Claude, Cursor, or
@@ -12,6 +17,26 @@ Agent Skill Atlas is an independent, unofficial open-source tool. It is not
 affiliated with OpenAI, Anthropic, Cursor, or any agent platform vendor.
 
 ![Agent Skill Atlas demo screenshot](docs/screenshot-demo.png)
+
+## Who It Is For
+
+Agent Skill Atlas is for agent power users who have accumulated enough local
+skills, plugins, workflows, and prompt packs that they need a map.
+
+It is useful when you want to:
+
+- understand what capabilities already exist on your machine;
+- spot overlapping or under-documented skills;
+- preview likely routes before opening full skill instructions;
+- summarize large plugin packs without flattening every child capability;
+- share a sanitized demo without exposing private skill bodies.
+
+It is not designed to be:
+
+- an awesome list of public skills;
+- a cloud skill registry;
+- a tool that uploads your local agent workspace;
+- an authorization layer for executing skills.
 
 ## Why This Exists
 
@@ -35,6 +60,13 @@ Install directly from GitHub:
 ```bash
 npm install -g github:draculavan/agent-skill-atlas
 agent-skill-atlas demo
+```
+
+That opens a bundled demo atlas. To scan your own skills:
+
+```bash
+agent-skill-atlas scan --out atlas.json
+agent-skill-atlas open --data atlas.json
 ```
 
 Or run from a local clone:
@@ -76,6 +108,26 @@ By default, Agent Skill Atlas:
   paths.
 
 Read the full policy in [docs/privacy.md](docs/privacy.md).
+
+## Roadmap
+
+The early roadmap focuses on compatibility and trust:
+
+- support more sanitized skill folder layouts;
+- improve taxonomy presets;
+- collect privacy review feedback;
+- add a short demo video/GIF;
+- improve install and update ergonomics.
+
+See [docs/roadmap.md](docs/roadmap.md).
+
+## Contributing
+
+The most useful contribution right now is a sanitized skill folder layout from
+your own agent setup. Do not paste private skill bodies, tokens, credentials,
+or full home-directory paths.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## CLI
 

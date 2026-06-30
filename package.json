@@ -12,6 +12,8 @@
     "public",
     "examples",
     "docs",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
     "README.md",
     "LICENSE"
   ],
