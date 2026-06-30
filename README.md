@@ -8,6 +8,9 @@ not an awesome list and it does not publish your private skills. The default
 scan exports only metadata such as name, description, category, route status,
 tags, and relative path.
 
+Agent Skill Atlas is an independent, unofficial open-source tool. It is not
+affiliated with OpenAI, Anthropic, Cursor, or any agent platform vendor.
+
 ![Agent Skill Atlas demo screenshot](docs/screenshot-demo.png)
 
 ## Why This Exists
