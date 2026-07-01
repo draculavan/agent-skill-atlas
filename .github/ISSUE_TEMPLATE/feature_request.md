@@ -17,4 +17,5 @@ assignees: ""
 
 ## Privacy or safety considerations
 
+Please do not paste private skill bodies, tokens, credentials, or full local paths. Sanitized metadata and redacted examples are enough.
 
