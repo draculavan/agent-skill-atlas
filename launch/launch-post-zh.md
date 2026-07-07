@@ -38,3 +38,19 @@ agent-skill-atlas open --data atlas.json
 它不是让你公开自己的私有 skills，而是帮每个 agent power user 看懂并管理自己的本地能力系统。
 
 Repo: https://github.com/draculavan/agent-skill-atlas
+
+Feedback wanted: please share only sanitized skill layout reports. Do not paste private `SKILL.md` bodies, tokens, credentials, full local paths, or real private project names.
+
+Copy/paste format:
+
+```text
+Agent/tool:
+Skill root shape:
+Entry file name(s):
+Metadata style:
+Nested assets or packs:
+Expected atlas behavior:
+Scanner warnings, if any:
+```
+
+README, privacy-boundary, and install-flow feedback is also welcome.
