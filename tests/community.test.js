@@ -51,3 +51,13 @@ test("Chinese launch post is readable UTF-8 copy", async () => {
   assert.match(content, /默认只导出 metadata/);
   assert.doesNotMatch(content, /鍙|戝|竷|璇|槑|锛|�|\?{3,}/);
 });
+
+test("README demo CTA stays privacy-first", async () => {
+  const content = await fs.readFile(path.join(root, "README.md"), "utf8");
+
+  assert.match(content, /Try The Demo First/);
+  assert.match(content, /examples\/demo-skills/);
+  assert.match(content, /not your local agent workspace/);
+  assert.match(content, /issues\/new\?template=skill_layout\.md/);
+  assert.match(content, /Do not paste private `SKILL\.md` bodies/);
+});

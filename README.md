@@ -18,6 +18,28 @@ affiliated with OpenAI, Anthropic, Cursor, or any agent platform vendor.
 
 ![Agent Skill Atlas demo screenshot](docs/screenshot-demo.png)
 
+## Try The Demo First
+
+The fastest privacy-safe check is the bundled demo. It uses the public sample
+skills in `examples/demo-skills`, not your local agent workspace.
+
+```bash
+npm install -g github:draculavan/agent-skill-atlas
+agent-skill-atlas demo
+```
+
+In the demo, check whether the atlas helps you answer:
+
+- what agent capabilities already exist;
+- which skills look ready to route;
+- where duplicate or under-documented skills might need cleanup.
+
+If Agent Skill Atlas does not match your local setup, please share only a
+sanitized folder layout with the
+[skill layout issue template](https://github.com/draculavan/agent-skill-atlas/issues/new?template=skill_layout.md).
+Do not paste private `SKILL.md` bodies, tokens, credentials, full local paths,
+or real private project names.
+
 ## Who It Is For
 
 Agent Skill Atlas is for agent power users who have accumulated enough local
