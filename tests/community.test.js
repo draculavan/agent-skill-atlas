@@ -7,6 +7,7 @@ import test from "node:test";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const issueTemplateRoot = path.join(root, ".github", "ISSUE_TEMPLATE");
 const launchRoot = path.join(root, "launch");
+const exampleRoot = path.join(root, "examples");
 
 async function readTemplate(fileName) {
   return fs.readFile(path.join(issueTemplateRoot, fileName), "utf8");
@@ -59,5 +60,24 @@ test("README demo CTA stays privacy-first", async () => {
   assert.match(content, /examples\/demo-skills/);
   assert.match(content, /not your local agent workspace/);
   assert.match(content, /issues\/new\?template=skill_layout\.md/);
+  assert.match(content, /examples\/sanitized-layout-report\.md/);
   assert.match(content, /Do not paste private `SKILL\.md` bodies/);
+});
+
+test("sanitized layout report example is safe to share", async () => {
+  const content = await fs.readFile(path.join(exampleRoot, "sanitized-layout-report.md"), "utf8");
+
+  for (const required of [
+    "Sanitized folder shape",
+    "Metadata style",
+    "Expected atlas behavior",
+    "Scanner warnings",
+    "Privacy concern"
+  ]) {
+    assert.ok(content.includes(required), `missing report field ${required}`);
+  }
+
+  assert.match(content, /relative paths/);
+  assert.match(content, /do not include private skill bodies/i);
+  assert.doesNotMatch(content, /C:\\\\|\/Users\/|\/home\/|gho_[A-Za-z0-9_]+|sk-[A-Za-z0-9_-]+/);
 });

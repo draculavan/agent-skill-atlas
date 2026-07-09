@@ -37,6 +37,8 @@ In the demo, check whether the atlas helps you answer:
 If Agent Skill Atlas does not match your local setup, please share only a
 sanitized folder layout with the
 [skill layout issue template](https://github.com/draculavan/agent-skill-atlas/issues/new?template=skill_layout.md).
+You can start from the
+[sanitized layout report example](examples/sanitized-layout-report.md).
 Do not paste private `SKILL.md` bodies, tokens, credentials, full local paths,
 or real private project names.
 
@@ -148,6 +150,9 @@ See [docs/roadmap.md](docs/roadmap.md).
 The most useful contribution right now is a sanitized skill folder layout from
 your own agent setup. Do not paste private skill bodies, tokens, credentials,
 or full home-directory paths.
+
+Start from the [sanitized layout report example](examples/sanitized-layout-report.md)
+if you want a safe format to copy.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 

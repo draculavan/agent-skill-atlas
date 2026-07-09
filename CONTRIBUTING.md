@@ -56,6 +56,9 @@ description: Short public-safe description.
 ---
 ```
 
+For a fuller copy/paste format, start with
+[examples/sanitized-layout-report.md](examples/sanitized-layout-report.md).
+
 ## Pull Requests
 
 Keep pull requests focused. Include:
@@ -64,4 +67,3 @@ Keep pull requests focused. Include:
 - why it matters;
 - how you validated it;
 - any privacy impact.
-
